@@ -7,6 +7,7 @@ body {
     padding: 0;
     background-color: #fff;
     font-family: 'Open Sans';
+    line-height: 1.5;
 }
 
 /* NAVBAR */
@@ -52,7 +53,7 @@ a {
 }
 
 .ident {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 /* MAIN */
@@ -62,6 +63,7 @@ main {
     min-height: 100vh;
     padding: 30px;
     padding-left: calc(30px + 300px);
+    color: #333;
 }
 
 header {
@@ -79,4 +81,9 @@ section:first-child {
 
 section ul {
     margin-left: 30px;
+}
+
+section p,
+section li {
+    font-size: 14px;
 }
