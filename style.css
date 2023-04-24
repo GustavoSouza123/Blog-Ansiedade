@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    transition: .2s;
 }
 
 body {
@@ -36,9 +37,11 @@ nav {
     top: 0;
     border-right: 3px solid #ccc;
     padding: 30px;
+    transition: none;
 }
 
 nav .top {
+    height: 75px;
     display: flex;
     align-items: center;
     padding-bottom: 30px;
@@ -53,7 +56,6 @@ nav .menu-toggle {
     height: 20px;
     margin-right: 20px;
     cursor: pointer;
-    transition: .2s;
 }
 
 nav .menu-toggle span {
@@ -65,14 +67,14 @@ nav .menu-toggle span {
 
 nav .menu-toggle span.active:nth-child(1) {
     top: 9px;
-    transform: rotate(45deg);
+    transform: rotate(135deg);
 }
 nav .menu-toggle span.active:nth-child(2) {
     opacity: 0;
 }
 nav .menu-toggle span.active:nth-child(3) {
     top: -9px;
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
 }
 
 nav ul {
@@ -104,6 +106,24 @@ a {
 
 .ident {
     margin-left: 25px;
+}
+
+/* navbar active elements */
+
+nav.active {
+    width: 90px;
+}
+
+nav header.active {
+    display: none;
+}
+
+nav ul.active {
+    display: none;
+}
+
+nav .menu-toggle.active {
+    margin: 0;
 }
 
 /* MAIN */
