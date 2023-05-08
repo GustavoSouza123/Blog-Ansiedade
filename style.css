@@ -3,6 +3,10 @@
     transition: .3s;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -35,6 +39,8 @@ nav {
     min-height: 100vh;
     position: sticky;
     top: 0;
+    background: linear-gradient(to bottom, #022d69, #efb6ff);
+    color: #eee;
     border-right: 3px solid #ccc;
     padding: 30px;
     transition: none;
@@ -68,14 +74,14 @@ nav .menu-toggle span {
 
 nav .menu-toggle span.active:nth-child(1) {
     top: 9px;
-    transform: rotate(135deg);
+    transform: rotate(-135deg);
 }
 nav .menu-toggle span.active:nth-child(2) {
     opacity: 0;
 }
 nav .menu-toggle span.active:nth-child(3) {
     top: -9px;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
 }
 
 nav ul {
@@ -96,7 +102,7 @@ nav li:first-child {
 }
 
 a {
-    color: #000;
+    color: #eee;
     text-decoration: none;
 }
 
@@ -143,6 +149,7 @@ main {
     padding: 30px;
     padding-left: calc(30px + 300px);
     color: #333;
+    transition: none;
 }
 
 header {
@@ -165,4 +172,43 @@ section ul {
 section p,
 section li {
     font-size: 14px;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        position: relative;
+        top: 0;
+        width: 100% !important;
+        min-height: 400px;
+        border: 0;
+        border-bottom: 3px solid #ccc;
+    }
+
+    nav.active {
+        min-height: 90px;
+    }
+    
+    nav .top.active {
+        height: 45px;
+        padding: 0;
+    }
+    
+    nav ul {
+        max-height: calc(400px - 60px - 75px - 30px - 1px);
+        overflow: auto;
+        margin-bottom: 3px;
+        padding-left: 1px;
+    }
+
+    main {
+        margin: 0;
+        padding: 30px !important;
+    }
 }
